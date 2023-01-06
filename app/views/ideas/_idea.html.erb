@@ -1,0 +1,20 @@
+<div id="<%= dom_id idea %>">
+  <p>
+    <strong>Name:</strong>
+    <%= idea.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= idea.description %>
+  </p>
+
+  <p>
+    <strong>Picture:</strong>
+  <!-- <%= idea.picture %>    (eigentlich sollte ich das in show.html.erb ändern. ist dort aber komischer weise nicht vorhanden)  -->
+    <%= image_tag(idea.picture_url, width: 600) if idea.picture.present? %>
+
+
+  </p>
+
+</div>
